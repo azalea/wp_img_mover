@@ -34,11 +34,13 @@ def processPost(postpath):
         md = '\n![](%s)\n'%replaceUrl(srctxt)
         if srcUrlPrefix in srctxt:
             copyImg(srctxt)
-        par = src.getparent() 
-        if par.getparent().tag == 'a':  # if <img> is inside <a>
-            par.getparent().getparent().replace(par.getparent(), E.P(md))
+        par = src.getparent()
+        parpar = par.getparent()
+        if parpar.tag == 'a':  # if <img> is inside <a>
+            parpar.getparent().replace(parpar, E.P(md + parpar.tail))
         else:                           # if <img> is not inside <a>
-            par.getparent().replace(par, E.P(md))
+            par.getparent().replace(par, E.P(md + par.tail))
+        # Note on replace(): http://comments.gmane.org/gmane.comp.python.lxml.devel/1971
 
     etree.strip_tags(tree, 'p', 'html', 'body')
 
