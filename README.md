@@ -49,10 +49,6 @@ Usage:
    If so, merge the test branch to master. 
 
    If not, edit the script at your will and retry.
-   
-   
-Known issues:
 
-Sometimes, text near the `<img>` tags may be truncated. 
 
    
