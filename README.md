@@ -1,7 +1,7 @@
 wp_img_mover
 ============
 
-This script identifies src property from `<img>` tags in all .md files, copies the image file to Dropbox, and changes the `<img>` tags to .md format. 
+This script identifies src property from `<img>` tags in .md files, copies the image file to Dropbox (if they were hosted on your Wordpress server), and changes the `<img>` tags to .md format. 
 
 
 Usage: 
@@ -13,7 +13,7 @@ Usage:
    Connect to your host via ftp. You may find the images in something like /wp-content/uploads 
 
 
-2. Edit this script to set the correct urls / paths in lines 9-13. 
+2. Edit the script `wp_img_mover.py` to set the correct urls / paths in lines 9-13. 
 
    `srcUrlPrefix`: prefix of the original image src url, excludes the part "year/mo/imagename.jpg", 
 
