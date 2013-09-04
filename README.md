@@ -19,8 +19,6 @@ Usage:
 
    destUrlPrefix: prefix of the Dropbox url where you would like to host the image, 
 
-                  i.e. a folder under the Public folder in Dropbox. 
-
                   e.g. 'https://dl.dropboxusercontent.com/u/308058/blogimages/'
 
    srcImgDirPrefix: directory on your local machine where you temporarily store the downloaded images from Wordpress. 
@@ -41,7 +39,7 @@ Usage:
 
 4. Run the script by: 
 
-   python wp_img_viewer.py 
+      python wp_img_viewer.py 
  
 
 5. Check very carefully to see if everything is ok. 
